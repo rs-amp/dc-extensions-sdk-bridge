@@ -1,0 +1,23 @@
+{
+  "name": "dc-extensions-sdk-bridge",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jsonpath": "^0.2.0",
+    "jsonpath": "^1.1.1",
+    "message-event-channel": "^1.1.0",
+    "typescript": "^4.9.4"
+  }
+}
