@@ -62,11 +62,6 @@ export class ExtensionBridge {
   private height = 0;
 
   constructor(private fieldPath: string, options: BridgeOptions = {}) {
-    // Modes:
-    // - nothing provided: create connection and get field from extension.
-    //   - just this for now
-    // - extensions sdk provided: steal connection and get field from input.
-
     this.onChange = options.onChange;
     this.parentConnection = options.parentConnection;
     this.field = options.field;
@@ -298,7 +293,8 @@ export class ExtensionBridge {
     this.childConnection.on(
       FIELD.MODEL_VALIDATE,
       async (payload: any, resolve: EventResolve, reject: EventReject) => {
-        reject(new Error("Validation unsupported."));
+        resolve(undefined);
+        //reject(new Error("Validation unsupported."));
       }
     );
 
